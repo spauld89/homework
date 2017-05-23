@@ -3,5 +3,7 @@ type repo = {
   url: string,
   description: string,
   owner: string,
-  avatar: string
+  avatar: string,
+  forks: number,
+  watchers: number
 };

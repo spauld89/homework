@@ -1,5 +1,10 @@
-<div class="search">
+<div class="search" color="primary">
   <md-input-container>
     <input mdInput placeholder="Search">
   </md-input-container>
+  <md-select placeholder="Sort by" [(ngModel)]="sortProp" name="sortProp">
+    <md-option *ngFor="let prop of sortingProperties" [value]="prop">
+      {{ prop }}
+    </md-option>
+  </md-select>
 </div>

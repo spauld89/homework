@@ -11,6 +11,8 @@ export class ResultsComponent  {
     url: 'https://github.com/facebook/react',
     description: "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
     owner: "facebook",
-    avatar: "https://avatars0.githubusercontent.com/u/69631?v=3"
+    avatar: "https://avatars0.githubusercontent.com/u/69631?v=3",
+    forks: 1500,
+    watchers: 94325
   };
 }
