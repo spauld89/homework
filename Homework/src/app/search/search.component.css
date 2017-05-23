@@ -1,0 +1,10 @@
+.search{
+  padding:15px 5%;
+  overflow: hidden;
+  background-color: #03a9f4;
+  width:90%;
+}
+.mat-input-container{
+  display:block;
+  color:#fff;
+}

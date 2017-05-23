@@ -1,3 +1,15 @@
-<p>
-  results works!
-</p>
+<md-card>
+  <md-card-header>
+    <div md-card-avatar>
+      <img [src]="repo.avatar" [alt]="repo.name">
+    </div>
+    <md-card-title>{{ repo.name }}</md-card-title>
+    <md-card-subtitle><a [href]="repo.url">{{ repo.url }}</a></md-card-subtitle>
+    <md-card-subtitle>{{ repo.owner }}</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <p>
+      {{ repo.description }}
+    </p>
+  </md-card-content>
+</md-card>
