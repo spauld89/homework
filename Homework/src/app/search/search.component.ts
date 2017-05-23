@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'hw-search',
@@ -6,10 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
+  @Output()
+  public onSearch: EventEmitter<string> = new EventEmitter();
+
   public sortingProperties: string[] = [
     'name',
     'forks',
     'watchers'
   ];
-  public sortProp: string;
+  public search(val: string): void {
+    this.onSearch.emit(val);
+  }
 }
