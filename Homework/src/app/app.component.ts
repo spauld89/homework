@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { SearchService } from './common/services/search/search.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   public searchValue: string;
+  public repos$: Observable<any[]>;
+
+  public constructor(
+    private _searchService: SearchService
+  ){}
   public onSearch(value: string): void {
     this.searchValue = value;
-    console.log(this.searchValue);
+    this.repos$ = this._searchService.getRepos(this.searchValue);
+    console.log(this.repos$);
   }
 }
