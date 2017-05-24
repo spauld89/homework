@@ -1,3 +1,3 @@
 type env = {
-  production: boolean,
+  production: boolean
 };
