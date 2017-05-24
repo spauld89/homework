@@ -1,1 +1,9 @@
-<hw-result *ngFor="let item of repos?.items" [repo]="item"></hw-result>
+<div *ngIf="!loading ; else loadGif">
+  <hw-result *ngFor="let item of repos?.items" [repo]="item"></hw-result>
+</div>
+
+<ng-template #loadGif>
+  <div class="loadBlock">
+    <img src="../../assets/images/gears.gif" alt="">
+  </div>
+</ng-template>

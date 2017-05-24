@@ -10,6 +10,7 @@ import { SearchService } from '../common/services/search/search.service';
 })
 export class ResultsListComponent implements OnInit{
   public repos: repoList;
+  public loading: boolean = false;
   private _searchSubject$$: Subject<string> = new Subject();
 
   public constructor(
@@ -25,8 +26,10 @@ export class ResultsListComponent implements OnInit{
     this._searchSubject$$
       .debounceTime(300)
       .subscribe((searchValue: string) => {
+      this.loading = true;
       this._searchService.getRepos(searchValue)
         .subscribe((repos: repoList) => {
+          this.loading = false;
           this.repos = repos;
         });
     });
