@@ -1,4 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/fromEvent';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/do';
 
 @Component({
   selector: 'hw-search',
@@ -14,7 +19,8 @@ export class SearchComponent {
     'forks',
     'watchers'
   ];
-  public search(val: string): void {
+
+  public search(val: string){
     this.onSearch.emit(val);
   }
 }

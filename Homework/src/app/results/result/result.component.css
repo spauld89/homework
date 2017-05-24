@@ -1,0 +1,15 @@
+.mat-card{
+  padding:24px 5%;
+}
+.mat-card-title{
+  text-transform: uppercase;
+}
+.mat-card-subtitle{
+  color:#999;
+}
+.mat-card-avatar img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

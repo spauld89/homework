@@ -5,17 +5,6 @@
   width:90%;
   margin-bottom:5px;
 }
-.search:after{
-  content:'';
-  display: table;
-  clear:both;
-}
-.mat-select{
-  width:20%;
-  float:right;
-  padding-top:9px;
-}
 .mat-input-container{
-  width:80%;
-  float:left;
+  display:block;
 }

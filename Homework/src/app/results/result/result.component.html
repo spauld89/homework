@@ -1,0 +1,18 @@
+<md-card>
+  <md-card-header>
+    <div md-card-avatar>
+      <img [src]="repo.owner.avatar_url" [alt]="repo.name">
+    </div>
+    <md-card-title>{{ repo.name }}</md-card-title>
+    <md-card-subtitle><a [href]="repo.url">{{ repo.url }}</a></md-card-subtitle>
+    <md-card-subtitle>{{ repo.owner.login }}</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <p>
+      {{ repo.description }}
+    </p>
+
+    <p>Forks: {{ repo.forks }}</p>
+    <p>Watchers: {{ repo.watchers }}</p>
+  </md-card-content>
+</md-card>

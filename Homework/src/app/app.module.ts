@@ -10,12 +10,14 @@ import { SearchService } from './common/services/search/search.service';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { ResultsComponent } from './results/results.component';
+import { ResultComponent } from './results/result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    ResultsComponent
+    ResultsComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,

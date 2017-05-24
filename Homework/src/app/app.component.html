@@ -1,6 +1,4 @@
 <hw-search (onSearch)="onSearch($event)"></hw-search>
+<hw-results [searchValue]="searchValue"></hw-results>
 
-<div *ngIf="repos$ | async as repos">
-  <hw-results *ngFor="let item of repos.items" [repo]="item"></hw-results>
-</div>
 
