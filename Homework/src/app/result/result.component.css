@@ -1,5 +1,6 @@
 .mat-card{
   padding:24px 5%;
+  margin-bottom:5px;
 }
 .mat-card-title{
   text-transform: uppercase;

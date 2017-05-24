@@ -9,8 +9,7 @@ import { SearchService } from '../common/services/search/search.service';
   styleUrls: ['./result-list.component.css']
 })
 export class ResultsListComponent implements OnInit{
-  public repos: any;
-
+  public repos: repoList;
   private _searchSubject$$: Subject<string> = new Subject();
 
   public constructor(
@@ -27,7 +26,7 @@ export class ResultsListComponent implements OnInit{
       .debounceTime(300)
       .subscribe((searchValue: string) => {
       this._searchService.getRepos(searchValue)
-        .subscribe((repos: any) => {
+        .subscribe((repos: repoList) => {
           this.repos = repos;
         });
     });
