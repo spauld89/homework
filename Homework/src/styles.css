@@ -3,3 +3,12 @@
 body{
   margin:0;
 }
+.loadBlockImg {
+  position: fixed;
+  left:50%;
+  top:50%;
+  transform: translateX(-50%) translateY(-50%);
+  width:120px;
+  height:120px;
+  background: url(assets/images/gears.gif);
+}
