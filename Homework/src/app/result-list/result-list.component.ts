@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/debounceTime';
 import { SearchService } from '../common/services/search/search.service';
 
 @Component({
@@ -22,7 +23,9 @@ export class ResultsListComponent implements OnInit{
   }
 
   public ngOnInit(): void {
-    this._searchSubject$$.subscribe((searchValue: string) => {
+    this._searchSubject$$
+      .debounceTime(300)
+      .subscribe((searchValue: string) => {
       this._searchService.getRepos(searchValue)
         .subscribe((repos: any) => {
           this.repos = repos;
