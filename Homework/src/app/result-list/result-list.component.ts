@@ -8,7 +8,7 @@ import { SearchService } from '../common/services/search/search.service';
   styleUrls: ['./result-list.component.css']
 })
 export class ResultsListComponent implements OnInit{
-  public repos: repo[];
+  public repos: any;
 
   private _searchSubject$$: Subject<string> = new Subject();
 
@@ -24,7 +24,7 @@ export class ResultsListComponent implements OnInit{
   public ngOnInit(): void {
     this._searchSubject$$.subscribe((searchValue: string) => {
       this._searchService.getRepos(searchValue)
-        .subscribe((repos: repo[]) => {
+        .subscribe((repos: any) => {
           this.repos = repos;
         });
     });
