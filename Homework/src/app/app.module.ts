@@ -9,14 +9,14 @@ import { SearchService } from './common/services/search/search.service';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
-import { ResultsComponent } from './results/results.component';
-import { ResultComponent } from './results/result/result.component';
+import { ResultsListComponent } from './result-list/result-list.component';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    ResultsComponent,
+    ResultsListComponent,
     ResultComponent
   ],
   imports: [

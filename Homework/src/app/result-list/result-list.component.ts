@@ -3,11 +3,11 @@ import { Subject } from 'rxjs/Subject';
 import { SearchService } from '../common/services/search/search.service';
 
 @Component({
-  selector: 'hw-results',
-  templateUrl: './results.component.html',
-  styleUrls: ['./results.component.css']
+  selector: 'hw-result-list',
+  templateUrl: './result-list.component.html',
+  styleUrls: ['./result-list.component.css']
 })
-export class ResultsComponent implements OnInit{
+export class ResultsListComponent implements OnInit{
   public repos: repo[];
 
   private _searchSubject$$: Subject<string> = new Subject();
