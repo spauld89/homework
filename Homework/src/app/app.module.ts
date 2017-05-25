@@ -22,7 +22,6 @@ import { ResultComponent } from './result/result.component';
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule,
     MaterialModule
   ],
   providers: [
